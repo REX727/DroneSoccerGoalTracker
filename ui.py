@@ -13,8 +13,7 @@ def UserInfo():
 
     ProfileName = input(f"Enter the {BOLD}Profile Name{END}: ").replace(" ", "_")
     Date = datetime.date.today()
-    DateString = Date.strftime("%Y%m%d")
-    path = DateString + "_" + UserName + "_" + ProfileName
+    path = UserName + "_" + ProfileName
     return path
 
 

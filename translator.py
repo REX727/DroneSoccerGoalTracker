@@ -8,7 +8,9 @@ def SaveData(lap_data, path):
     for lap in range(len(lap_data)):
         save_data = save_data + str(lap_data[lap]) + '\n'
     os.chdir('Data')
-    f = os.open(path, os.O_RDWR|os.O_CREAT)
+    
+    path_txt = path + ".txt"
+    f = os.open(path_txt, os.O_RDWR|os.O_CREAT)
     os.write(f, save_data.encode())
 
     print(f"\n{GBOLD}Saved {path} in Data folder.{END}")

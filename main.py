@@ -3,8 +3,6 @@ import style as s
 import ui as ui 
 import translator as t
 
-#Third-Party Modules
-import datetime
 
 lap_data = []
 

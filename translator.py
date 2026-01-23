@@ -1,3 +1,4 @@
+#Translator Mdoule
 import os
 
 GBOLD = '\033[1m'+ '\033[32m'

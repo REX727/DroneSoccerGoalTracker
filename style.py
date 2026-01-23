@@ -1,5 +1,4 @@
 #Style Module 
-
 BOLD = '\033[1m'
 END = '\033[0m'
 GBOLD = BOLD + '\033[32m'

@@ -1,10 +1,8 @@
 from machine import Pin, Timer
-from tm1637 import TM1637
+import TM1637
 
 import time
 import os
-
-from tm1637 import TM1637 # 假設這個庫存在
 
 tm = TM1637(clk=Pin(27), dio=Pin(26))
 

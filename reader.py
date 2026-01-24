@@ -1,18 +1,14 @@
-import ui as u
-import translator as t
-from time import sleep
+import DSGT as t
 import os
+from time import sleep
 
-print(f"{u.GBOLD}Available files in Data folder:{u.END}")
-file_list = t.ScanFile("DroneSoccerGoalTracker/Data")   
-for file in file_list:
-    print(f"- {u.BOLD}{file}{u.END}")
-path = u.AskPath()
-
+file_list = t.ScanFile("DroneSoccerGoalTracker/Data")
+t.PrintFileList(file_list)
+path = t.AskPath()
 lap_data = t.LoadData(path)
 
 os.system("clear" if os.name == "nt" else "clear")
-print(f"\n{u.GBOLD}Loaded {path}.txt with {len(lap_data)} goals.{u.END}\n")
+print(f"\n{t.GBOLD}Loaded {path}.txt with {len(lap_data)} goals.{t.END}\n")
 for lap in range(len(lap_data)):
     sleep(lap_data[lap])
-    print(f"{u.GBOLD}GOAL {lap+1} completed in {lap_data[lap]} seconds!{u.END}")
+    print(f"{t.GBOLD}GOAL {lap+1} completed in {lap_data[lap]} seconds!{t.END}")

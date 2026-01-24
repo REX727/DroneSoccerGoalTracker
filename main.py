@@ -1,14 +1,11 @@
-import style as s
-import ui as ui 
-import translator as t
-
+import DSGT as t
 
 lap_data = []
 
-path = ui.UserInfo()
-lap_data = ui.UserPrompt(path)
+path = t.UserInfo()
+lap_data = t.UserPrompt()
 
 t.SaveData(lap_data, path)
 
 
-ui.ExitProgram(path, lap_data)
+t.ExitProgram(path, lap_data)

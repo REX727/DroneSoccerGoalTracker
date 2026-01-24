@@ -8,7 +8,7 @@ def SaveData(lap_data, path):
     save_data = ""
     for lap in range(len(lap_data)):
         save_data = save_data + str(lap_data[lap]) + '\n'
-    os.chdir('Data')
+    os.chdir('DroneSoccerGoalTracker/Data')
     
     path_txt = path + ".txt"
     f = os.open(path_txt, os.O_RDWR|os.O_CREAT)
@@ -16,3 +16,13 @@ def SaveData(lap_data, path):
 
     print(f"\n{GBOLD}Saved {path} in Data folder.{END}")
     
+def LoadData(path):
+    os.chdir('DroneSoccerGoalTracker/Data')
+    lap_data = []
+
+    path_txt = path + ".txt"
+    f = open(path_txt, 'rt')
+    for line in f:
+        lap_data.append(float(line.strip()))
+    return lap_data
+    f.close()

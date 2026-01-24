@@ -1,4 +1,3 @@
-# DroneSoccerGoalTracker Module
 import style as s
 import ui as ui 
 import translator as t

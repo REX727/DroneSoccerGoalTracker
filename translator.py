@@ -26,3 +26,10 @@ def LoadData(path):
         lap_data.append(float(line.strip()))
     return lap_data
     f.close()
+
+def ScanFile(path):
+    f = os.scandir(path)
+    file_list = []
+    for file in f:
+        file_list.append(file.name)
+    return file_list

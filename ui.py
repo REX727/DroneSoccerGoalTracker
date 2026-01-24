@@ -1,4 +1,4 @@
-#ui module
+#UserInput module
 import datetime
 
 BOLD = '\033[1m'
@@ -45,4 +45,7 @@ def ExitProgram(path, lap_data):
             print(Split)
             print(f"Total Goals: {GBOLD}{len(lap_data)}{END}")
             print(f"Average Seconds Per Goal: {GBOLD}{AvgTimes}s{END}(rounded to 2 decimal places)")
-            
+
+def AskPath():
+    path = input(f"Enter the {BOLD}file name{END} to load (without .txt): ")
+    return path
